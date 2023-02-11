@@ -1,0 +1,7 @@
+version: 2
+
+sources:
+  - name: dbt_miwao
+    tables:
+      - name: stg_customers
+      - name: stg_orders

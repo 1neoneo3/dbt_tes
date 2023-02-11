@@ -1,8 +1,8 @@
 with customers as (
-    select * from {{ ref('stg_customers') }}
+    select * from {{ source('dbt_miwao', 'stg_customers') }}
 ),
 orders as (
-    select * from {{ ref('stg_orders') }}
+    select * from {{ source('dbt_miwao', 'stg_orders') }}
 ),
 customer_orders as (
     -- 顧客単位のオーダー数を求める
